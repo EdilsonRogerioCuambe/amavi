@@ -16,7 +16,7 @@ export default function NewsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = ['all', 'Educação', 'Saúde', 'Desenvolvimento', 'Institucional'];
+  const categories = ['all', 'Educação', 'Saúde', 'Desenvolvimento', 'Institucional', 'Protecção Social', 'Inclusão', 'Nutrição'];
 
   const filteredArticles = newsArticles
     .filter(article => selectedCategory === 'all' || article.category === selectedCategory)

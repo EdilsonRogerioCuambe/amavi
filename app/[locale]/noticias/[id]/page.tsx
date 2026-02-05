@@ -13,7 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const news = newsArticles.find(item => item.id === id);
+  const news = newsArticles.find(item => item.id === id || item.slug === id);
   const t = await getTranslations('NewsArticlePage');
 
   if (!news) return { title: t('not_found_title') };
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function NewsDetailPage({ params }: Props) {
   const { id } = await params;
-  const news = newsArticles.find(item => item.id === id);
+  const news = newsArticles.find(item => item.id === id || item.slug === id);
   const t = await getTranslations('NewsArticlePage');
 
   if (!news) {
