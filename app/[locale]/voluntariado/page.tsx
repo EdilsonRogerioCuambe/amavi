@@ -5,25 +5,25 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import {
-    ArrowRight,
-    Award,
-    Briefcase,
-    CheckCircle2,
-    ChevronRight,
-    Heart,
-    HelpingHand,
-    MessageSquare,
-    Send,
-    Sparkles,
-    Users
+  ArrowRight,
+  Award,
+  Briefcase,
+  CheckCircle2,
+  ChevronRight,
+  Heart,
+  HelpingHand,
+  MessageSquare,
+  Send,
+  Sparkles,
+  Users
 } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -277,7 +277,7 @@ export default function VolunteerPage() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="exemplo@email.com"
+                      placeholder="amavi@amavi.org.mz"
                       className="h-14 md:h-16 rounded-2xl border-none bg-white px-6 md:px-8 text-base md:text-lg font-medium focus:ring-2 focus:ring-amavi-green transition-all shadow-sm"
                     />
                   </div>

@@ -77,7 +77,7 @@ export function Footer() {
               <li className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-amavi-green flex-shrink-0 transition-transform group-hover:scale-110" />
                 <span className="text-sm text-amavi-beige/60 group-hover:text-amavi-beige transition-colors">
-                  contato@amavi.org.mz
+                  amavi@amavi.org.mz
                 </span>
               </li>
             </ul>

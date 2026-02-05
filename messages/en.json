@@ -225,7 +225,7 @@
     "info_phone_label": "Phone",
     "info_phone_value": "+258 84 123 4567",
     "info_email_label": "Email",
-    "info_email_value": "contato@amavi.org.mz",
+    "info_email_value": "amavi@amavi.org.mz",
     "info_hours_label": "Office Hours",
     "info_hours_value": "Monday to Friday: 08:00 - 17:00",
     "form_title": "Send a Message",
@@ -233,7 +233,7 @@
     "form_name_label": "Full Name",
     "form_name_placeholder": "Your name",
     "form_email_label": "Email",
-    "form_email_placeholder": "your@email.com",
+    "form_email_placeholder": "amavi@amavi.org.mz",
     "form_subject_label": "Subject",
     "form_subject_placeholder": "How can we help?",
     "form_message_label": "Message",
@@ -288,7 +288,7 @@
     "section5_title": "5. Your Rights",
     "section5_content": "You have the right to access, correct, or delete your personal data. Contact us to exercise these rights.",
     "contact_title": "Contact",
-    "contact_text": "For privacy questions, email: privacy@amavi.org.mz"
+    "contact_text": "For privacy questions, email: amavi@amavi.org.mz"
   },
   "TermsPage": {
     "title": "Terms of Use",
