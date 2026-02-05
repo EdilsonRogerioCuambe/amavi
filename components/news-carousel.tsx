@@ -1,5 +1,6 @@
 "use client"
 
+import { Link } from '@/app/i18n/navigation';
 import {
     Carousel,
     CarouselContent,
@@ -12,7 +13,6 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, Calendar } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 

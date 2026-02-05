@@ -1,10 +1,10 @@
+import { Link } from '@/app/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { newsArticles } from '@/lib/news-data';
 import { Calendar, ChevronLeft, Share2, Tag, User } from 'lucide-react';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface Props {

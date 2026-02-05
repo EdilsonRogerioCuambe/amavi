@@ -1,8 +1,8 @@
+import { Link } from '@/app/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { BadgeCheck, Calendar, ChevronLeft, Heart, MapPin, Users } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { programsInfo } from '@/lib/programs-data';

@@ -1,7 +1,7 @@
+import { Link } from '@/app/i18n/navigation';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export function Footer() {
   const t = useTranslations('Footer');

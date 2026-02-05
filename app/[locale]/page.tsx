@@ -1,3 +1,4 @@
+import { Link } from '@/app/i18n/navigation';
 import { CTASection } from '@/components/cta-section';
 import { ImpactCard } from '@/components/impact-card';
 import { NewsCarousel } from '@/components/news-carousel';
@@ -14,7 +15,6 @@ import {
   Users
 } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { Metadata } from 'next';
 

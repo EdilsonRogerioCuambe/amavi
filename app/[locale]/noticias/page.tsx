@@ -1,4 +1,5 @@
 "use client"
+import { Link } from '@/app/i18n/navigation';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -8,7 +9,6 @@ import { cn } from '@/lib/utils';
 import { ArrowRight, Calendar, ChevronRight, Clock, Mail, Newspaper, Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 
 export default function NewsPage() {
