@@ -116,7 +116,7 @@ export function NewsCarousel({ articles }: NewsCarouselProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-10 left-10 flex gap-2 z-20">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-10 md:left-10 md:translate-x-0 flex gap-2 z-20">
           {articles.map((_, index) => (
             <button
               key={index}
@@ -124,16 +124,16 @@ export function NewsCarousel({ articles }: NewsCarouselProps) {
               className={cn(
                 "h-1.5 transition-all duration-500 rounded-full",
                 current === index
-                  ? "w-10 bg-amavi-green"
+                  ? "w-8 md:w-10 bg-amavi-green"
                   : "w-1.5 bg-white/30 hover:bg-white/50"
               )}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
-        <div className="absolute bottom-10 right-10 flex gap-4 z-20 text-white">
-          <CarouselPrevious className="static translate-y-0 h-10 w-10 border-2 border-white/30 bg-black/20 text-white hover:bg-amavi-green hover:border-amavi-green hover:text-white rounded-full backdrop-blur-md transition-all scale-90 hover:scale-100" />
-          <CarouselNext className="static translate-y-0 h-10 w-10 border-2 border-white/30 bg-black/20 text-white hover:bg-amavi-green hover:border-amavi-green hover:text-white rounded-full backdrop-blur-md transition-all scale-90 hover:scale-100" />
+        <div className="absolute bottom-6 right-4 md:bottom-10 md:right-10 flex gap-2 md:gap-4 z-20 text-white">
+          <CarouselPrevious className="static translate-y-0 h-8 w-8 md:h-10 md:w-10 border-2 border-white/30 bg-black/20 text-white hover:bg-amavi-green hover:border-amavi-green hover:text-white rounded-full backdrop-blur-md transition-all scale-90 hover:scale-100" />
+          <CarouselNext className="static translate-y-0 h-8 w-8 md:h-10 md:w-10 border-2 border-white/30 bg-black/20 text-white hover:bg-amavi-green hover:border-amavi-green hover:text-white rounded-full backdrop-blur-md transition-all scale-90 hover:scale-100" />
         </div>
       </Carousel>
     </section>
