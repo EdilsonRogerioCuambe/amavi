@@ -3,26 +3,29 @@ import { ImpactCard } from '@/components/impact-card';
 import { ProgramCard } from '@/components/program-card';
 import { Button } from '@/components/ui/button';
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
 } from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
 import {
-    ArrowRight,
-    BookOpen,
-    Calendar,
-    GraduationCap,
-    HandHeart,
-    Heart,
-    Home,
-    Shield,
-    Stethoscope,
-    Users
+  ArrowRight,
+  BookOpen,
+  Calendar,
+  GraduationCap,
+  HandHeart,
+  Heart,
+  Home,
+  Shield,
+  Stethoscope,
+  Users
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 import { Metadata } from 'next';
 
@@ -39,6 +42,23 @@ import { programsInfo } from '@/lib/programs-data';
 
 export default function HomePage() {
   const t = useTranslations('HomePage');
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [api]);
 
   const featuredNews = newsArticles.slice(0, 4);
 
@@ -59,6 +79,7 @@ export default function HomePage() {
       {/* Featured News Carousel - FULL SCREEN HERO STYLE */}
       <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
         <Carousel
+          setApi={setApi}
           opts={{
             align: "start",
             loop: true,
@@ -73,10 +94,13 @@ export default function HomePage() {
                     src={news.image}
                     alt={news.title}
                     fill
-                    className="object-cover brightness-50"
+                    className={cn(
+                      "object-cover transition-transform duration-[10000ms] ease-linear",
+                      current === index ? "scale-110 brightness-50" : "scale-100 brightness-[0.4]"
+                    )}
                     priority={index === 0}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 md:p-12 max-w-5xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amavi-green/90 text-white text-sm font-bold uppercase tracking-wider mb-6 animate-in fade-in slide-in-from-bottom duration-700">
@@ -107,6 +131,19 @@ export default function HomePage() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <div className="absolute bottom-10 left-10 flex gap-2 z-20">
+            {featuredNews.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={cn(
+                  "h-1.5 transition-all duration-500 rounded-full",
+                  current === index ? "w-10 bg-amavi-green" : "w-1.5 bg-white/30 hover:bg-white/50"
+                )}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
           <div className="absolute bottom-10 right-10 flex gap-4 z-20">
             <CarouselPrevious className="static translate-y-0 h-10 w-10 border-2 border-white/30 bg-black/20 text-white hover:bg-amavi-green hover:border-amavi-green hover:text-white rounded-full backdrop-blur-md transition-all scale-90 hover:scale-100" />
             <CarouselNext className="static translate-y-0 h-10 w-10 border-2 border-white/30 bg-black/20 text-white hover:bg-amavi-green hover:border-amavi-green hover:text-white rounded-full backdrop-blur-md transition-all scale-90 hover:scale-100" />
