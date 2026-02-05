@@ -462,7 +462,7 @@ export default function VolunteerPage() {
             <Button
               size="lg"
               variant="outline"
-              className="h-16 md:h-20 px-8 md:px-12 border-white text-white hover:bg-white hover:text-amavi-green font-bold text-lg md:text-xl rounded-2xl md:rounded-3xl transition-all border-2"
+              className="h-16 md:h-20 px-8 md:px-12 border-white text-white hover:bg-white hover:text-amavi-green font-bold text-lg md:text-xl rounded-2xl md:rounded-3xl transition-all border-2 cursor-pointer text-amavi-brown"
             >
               Fale Connosco
             </Button>
