@@ -6,6 +6,7 @@ import Image from 'next/image';
 export function Footer() {
   const t = useTranslations('Footer');
   const tNav = useTranslations('Navigation');
+  const tContact = useTranslations('ContactPage');
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -71,7 +72,7 @@ export function Footer() {
               <li className="flex items-center gap-3 group">
                 <Phone className="w-5 h-5 text-amavi-green flex-shrink-0 transition-transform group-hover:scale-110" />
                 <span className="text-sm text-amavi-beige/60 group-hover:text-amavi-beige transition-colors">
-                  +258 XX XXX XXXX
+                  {tContact('info_phone_value')}
                 </span>
               </li>
               <li className="flex items-center gap-3 group">
