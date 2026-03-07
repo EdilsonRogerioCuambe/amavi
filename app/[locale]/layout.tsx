@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "EZYbjab4pWmBC8PgFYI34VHV4DUC070Er_LE48R70vk..",
+    google: "EZYbjab4pWmBC8PgFYI34VHV4DUC070Er_LE48R70vk",
     other: {
       "msvalidate.01": "C4520CB409BDDABF509D7E41ADE3DFA9",
     },

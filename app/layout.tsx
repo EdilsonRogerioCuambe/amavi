@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  verification: {
+    google: "EZYbjab4pWmBC8PgFYI34VHV4DUC070Er_LE48R70vk",
+    other: {
+      "msvalidate.01": "C4520CB409BDDABF509D7E41ADE3DFA9",
+    },
+  },
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
