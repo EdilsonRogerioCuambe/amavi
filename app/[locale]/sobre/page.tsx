@@ -22,7 +22,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Sobre Nós | Nossa História e Missão',
-  description: 'Conheça a história da AMAVI - Associação Mãos que Acolhem Vidas, reconhecida juridicamente em 29 de Julho de 2025, dedicada ao desenvolvimento de comunidades vulneráveis em Moçambique.',
+  description: 'Conheça a história da AMAVI - Associação Mãos que Acolhem Vidas, dedicada ao desenvolvimento de comunidades vulneráveis em Moçambique desde 2025.',
+  keywords: ["História AMAVI", "Missão AMAVI", "Equipe AMAVI Moçambique", "Fundadores AMAVI", "ONG Marracuene"],
 };
 
 export default function AboutPage() {

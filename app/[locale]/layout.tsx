@@ -12,7 +12,20 @@ export const metadata: Metadata = {
     template: "%s | AMAVI - Moçambique"
   },
   description: "A AMAVI é uma ONG moçambicana dedicada a transformar vidas através de educação, saúde e desenvolvimento comunitário sustentável em Moçambique. Junte-se à nossa missão e ajude-nos a criar impacto real.",
-  keywords: ["ONG Moçambique", "Ajuda Humanitária", "Educação em África", "Doações Moçambique", "Voluntariado", "AMAVI", "Desenvolvimento Social", "Associação Mãos Que Acolhem Vidas"],
+  keywords: [
+    "ONG Moçambique",
+    "Ajuda Humanitária Moçambique",
+    "Educação em África",
+    "Doações Moçambique",
+    "Voluntariado Moçambique",
+    "AMAVI Moçambique",
+    "Associação Mãos Que Acolhem Vidas",
+    "Desenvolvimento Comunitário Marracuene",
+    "Apoio a crianças órfãs Moçambique",
+    "Empoderamento feminino Moçambique",
+    "Saúde reprodutiva Moçambique",
+    "Projetos sociais Moçambique"
+  ],
   authors: [{ name: "AMAVI Team" }],
   creator: "AMAVI",
   publisher: "AMAVI",

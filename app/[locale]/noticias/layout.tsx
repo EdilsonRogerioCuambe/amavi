@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Notícias e Atualizações | Blog AMAVI",
   description: "Fique por dentro das últimas notícias, histórias de sucesso e relatórios de atividades da AMAVI.",
+  keywords: ["Notícias AMAVI", "Relatórios de impacto Moçambique", "Blog ONG Moçambique", "Atualizações AMAVI"],
 };
 
 export default function NewsLayout({
