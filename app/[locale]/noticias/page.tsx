@@ -101,7 +101,7 @@ export default function NewsPage() {
               </div>
             </div>
             <Link href={`/noticias/${filteredArticles[0].id}`}>
-              <Card className="overflow-hidden rounded-[2rem] border-none shadow-[0_20px_50px_-12px_rgba(45,35,27,0.08)] hover:shadow-[0_30px_60px_-12px_rgba(45,35,27,0.12)] transition-all duration-700 group bg-white">
+              <Card className="overflow-hidden rounded-[2rem] border-none shadow-[0_20px_50px_-12px_rgba(45,35,27,0.08)] hover:shadow-[0_30px_60px_-12px_rgba(45,35,27,0.12)] transition-all duration-700 group bg-white p-0 gap-0">
                 <div className="grid lg:grid-cols-2">
                   <div className="h-[300px] md:h-[400px] lg:h-auto relative overflow-hidden">
                     <Image
@@ -169,7 +169,7 @@ export default function NewsPage() {
               {filteredArticles.slice(searchTerm === '' && selectedCategory === 'all' ? 1 : 0).map((article) => (
                 <Link key={article.id} href={`/noticias/${article.id}`}>
                   <Card
-                    className="h-full rounded-[2rem] overflow-hidden border border-amavi-beige/20 hover:shadow-[0_20px_40px_-12px_rgba(45,35,27,0.1)] hover:-translate-y-1.5 transition-all duration-700 group flex flex-col bg-white"
+                    className="h-full rounded-[2rem] overflow-hidden border border-amavi-beige/20 hover:shadow-[0_20px_40px_-12px_rgba(45,35,27,0.1)] hover:-translate-y-1.5 transition-all duration-700 group flex flex-col bg-white p-0 gap-0"
                   >
                     <div className="relative h-56 md:h-60 overflow-hidden">
                       <Image
