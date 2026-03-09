@@ -14,6 +14,25 @@ export interface NewsArticle {
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: "agra-womens-conference",
+    slug: "amavi-na-conferencia-da-mulher-agra",
+    title: 'AMAVI Presente na Conferência da Mulher Organizada pela AGRA',
+    excerpt: 'AMAVI marca presença na Conferência da Mulher promovida pela AGRA em Moçambique, reforçando o compromisso com o empoderamento feminino no agronegócio.',
+    content: `
+      <p class="mb-6">A Associação Mãos que Acolhem Vidas (AMAVI) marcou presença na prestigiada Conferência da Mulher, organizada pela AGRA (Aliança para uma Revolução Verde em África) em Moçambique.</p>
+      <p class="mb-6">O evento reuniu líderes femininas, empreendedoras e organizações da sociedade civil para debater o papel crucial da mulher no desenvolvimento agrícola, segurança alimentar e inovação no continente africano.</p>
+      <h3 class="text-2xl font-bold text-amavi-brown mb-4">Liderança e Sustentabilidade</h3>
+      <p class="mb-6">Durante a conferência, a representação da AMAVI partilhou as suas experiências no trabalho direto com comunidades rurais, destacando a necessidade urgente de políticas que facilitem o acesso a financiamento (microcrédito) e tecnologias agrícolas para mulheres.</p>
+      <p class="mb-6">A participação neste fórum reforça a nossa missão estatutária de promover o empoderamento económico e social das mulheres, alinhando as iniciativas locais da associação com as grandes estratégias de desenvolvimento continental promovidas pela AGRA.</p>
+    `,
+    category: 'Eventos',
+    date: '2026-03-09',
+    image: '/imagens/WhatsApp Image 2026-03-09 at 04.24.20 (1).jpeg',
+    readTime: '3 min',
+    author: 'Direcção AMAVI',
+    tags: ['Mulheres', 'Agronegócio', 'AGRA', 'Empoderamento', 'Eventos']
+  },
+  {
     id: "1",
     slug: "amavi-reconhecimento-juridico-2025",
     title: 'AMAVI Recebe Reconhecimento Jurídico Oficial',

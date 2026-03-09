@@ -1,18 +1,19 @@
 import { Link } from '@/app/i18n/navigation';
 import { CTASection } from '@/components/cta-section';
+import { ImageGallery } from '@/components/image-gallery';
 import { ImpactCard } from '@/components/impact-card';
 import { NewsCarousel } from '@/components/news-carousel';
 import { ProgramCard } from '@/components/program-card';
 import { Button } from '@/components/ui/button';
 import {
-  BookOpen,
-  GraduationCap,
-  HandHeart,
-  Heart,
-  Home,
-  Shield,
-  Stethoscope,
-  Users
+    BookOpen,
+    GraduationCap,
+    HandHeart,
+    Heart,
+    Home,
+    Shield,
+    Stethoscope,
+    Users
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -43,6 +44,54 @@ export default function HomePage() {
     { name: "Movitel", logo: "/partterns/movitel.jpg" },
     { name: "CFM", logo: "/partterns/cfm.webp" },
     { name: "CDM", logo: "/partterns/cdm.webp" }
+  ];
+
+  const galleryImages = [
+    {
+      id: "img1",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 04.24.20 (1).jpeg",
+      alt: "Participação da AMAVI na Conferência da Mulher da AGRA",
+      title: "Conferência da Mulher - AGRA",
+      description: "A AMAVI marcou presença para debater o empoderamento feminino no agronegócio.",
+      className: "md:col-span-2 md:row-span-2"
+    },
+    {
+      id: "img2",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 04.24.20.jpeg",
+      alt: "Painel de Discussão AGRA",
+      title: "Painel de Discussão",
+      description: "Debates sobre financiamento e inovação agrícola para as mulheres."
+    },
+    {
+      id: "img3",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 04.24.21 (1).jpeg",
+      alt: "Representação Institucional AMAVI",
+      title: "Representação Institucional",
+      description: "Língando a nossa missão local às estratégias continentais de desenvolvimento rural."
+    },
+    {
+      id: "img4",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 04.24.21 (2).jpeg",
+      alt: "Networking na Conferência AGRA",
+      title: "Construção de Parcerias",
+      description: "Fortalecendo alianças para a revolução verde e inclusiva em Moçambique.",
+      className: "md:col-span-2"
+    },
+    {
+      id: "img5",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 04.24.21 (3).jpeg",
+      alt: "Líderes Locais e Sustentabilidade",
+      title: "Líderes em Foco",
+      description: "As mulheres no centro da inovação agro-sustentável."
+    },
+    {
+      id: "img6",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 04.24.21.jpeg",
+      alt: "Agenda AGRA - Empoderamento Económico",
+      title: "Empoderamento e Futuro",
+      description: "Representando as vozes de comunidades no desenvolvimento agrícola.",
+      className: "md:col-span-2"
+    }
   ];
 
   return (
@@ -267,6 +316,23 @@ export default function HomePage() {
       {/* Removed Testimonials Section as requested */}
 
       {/* Removed Partners Section as requested */}
+
+      {/* Image Gallery Section */}
+      <section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-amavi-green mb-6 text-center">
+              Nossa Galeria de Participações
+            </h2>
+            <p className="text-xl text-amavi-green/80 max-w-2xl mx-auto text-center">
+              Confira alguns dos momentos registados nas ações onde a AMAVI esteve presente.
+            </p>
+          </div>
+          <ImageGallery
+            images={galleryImages}
+          />
+        </div>
+      </section>
 
       {/* Final CTA */}
       <CTASection

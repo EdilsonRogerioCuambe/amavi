@@ -36,8 +36,9 @@ export function Header() {
     { label: t('about'), href: '/sobre' },
     { label: t('programs'), href: '/programas' },
     { label: t('impact'), href: '/impacto' },
-    { label: t('volunteer'), href: '/voluntariado' },
     { label: t('news'), href: '/noticias' },
+    { label: t('gallery'), href: '/galeria' },
+    { label: t('volunteer'), href: '/voluntariado' },
     { label: t('contacts'), href: '/contato' },
   ];
 

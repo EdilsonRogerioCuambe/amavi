@@ -40,6 +40,7 @@
     "impact": "Impacto",
     "donate": "Doar",
     "news": "Notícias",
+    "gallery": "Galeria",
     "volunteer": "Voluntariado",
     "contacts": "Contactos"
   },
@@ -290,5 +291,12 @@
     "section5_content": "Reservamo-nos o direito de modificar estes termos a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação.",
     "contact_title": "Contato",
     "contact_text": "Para dúvidas sobre estes termos, entre em contato: legal@amavi.org.mz"
+  },
+  "GalleryPage": {
+    "hero_title_prefix": "Nossa",
+    "hero_title_highlight": "Galeria",
+    "hero_description": "Reviva os momentos mais marcantes das nossas acções e veja o impacto do nosso trabalho no terreno.",
+    "gallery_title": "Momentos AMAVI",
+    "gallery_desc": "Uma imagem vale mais que mil palavras. Acompanhe a nossa jornada pelas comunidades moçambicanas."
   }
 }

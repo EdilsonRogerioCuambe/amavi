@@ -47,6 +47,7 @@
     "impact": "Impact",
     "donate": "Donate",
     "news": "News",
+    "gallery": "Gallery",
     "volunteer": "Volunteer",
     "contacts": "Contact"
   },
@@ -304,5 +305,12 @@
     "section5_content": "We reserve the right to modify these terms at any time. Changes will take effect immediately upon publication.",
     "contact_title": "Contact",
     "contact_text": "For questions about these terms, contact: legal@amavi.org.mz"
+  },
+  "GalleryPage": {
+    "hero_title_prefix": "Our",
+    "hero_title_highlight": "Gallery",
+    "hero_description": "Relive the most striking moments of our actions and see the impact of our work on the ground.",
+    "gallery_title": "AMAVI Moments",
+    "gallery_desc": "A picture is worth a thousand words. Follow our journey through Mozambican communities."
   }
 }
