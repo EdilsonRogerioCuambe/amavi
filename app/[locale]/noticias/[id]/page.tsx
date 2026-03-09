@@ -128,7 +128,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
             {/* Tags Section */}
             <div className="mt-20 pt-12 border-t border-amavi-beige/10">
-              <h4 className="text-xs font-black uppercase tracking-[0.2em] text-amavi-brown/30 mb-6">{t('tags_label') || 'Tags'}</h4>
+              <h4 className="text-xs font-black uppercase tracking-[0.2em] text-amavi-brown/30 mb-6">{t('tags_label')}</h4>
               <div className="flex flex-wrap gap-3">
                 {news.tags.map(tag => (
                   <div key={tag} className="flex items-center gap-2 bg-amavi-bg-light/50 border border-amavi-beige/10 px-6 py-3 rounded-2xl text-amavi-brown font-bold text-[11px] uppercase tracking-widest hover:bg-amavi-green hover:text-white hover:border-amavi-green hover:-translate-y-1 transition-all cursor-pointer group shadow-sm">
@@ -144,7 +144,7 @@ export default async function NewsDetailPage({ params }: Props) {
                {newsArticles.filter(i => i.id !== news.id).slice(0, 2).map((item, idx) => (
                  <Link key={item.id} href={`/noticias/${item.id}`} className="group p-8 rounded-[2rem] bg-amavi-bg-light/30 border border-amavi-beige/10 hover:border-amavi-green/20 hover:bg-white hover:shadow-xl transition-all">
                     <span className="text-[10px] font-black text-amavi-green uppercase tracking-[0.2em]">
-                      {idx === 0 ? 'Anterior' : 'Próxima'}
+                      {idx === 0 ? t('previous_post') : t('next_post')}
                     </span>
                     <h5 className="font-bold text-lg text-amavi-brown mt-3 group-hover:text-amavi-green transition-colors line-clamp-2">
                        {item.title}
@@ -160,11 +160,11 @@ export default async function NewsDetailPage({ params }: Props) {
             <div className="bg-amavi-brown p-10 rounded-[2.5rem] text-white relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-amavi-green/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-amavi-green/40 transition-all duration-700" />
               <Heart className="w-12 h-12 text-amavi-green mb-6 animate-pulse" />
-              <h3 className="text-2xl font-bold mb-4 font-outfit">Sua contribuição muda vidas.</h3>
-              <p className="text-white/70 text-sm mb-8 leading-relaxed">Ajude-nos a continuar acolhendo vidas e transformando comunidades através da AMAVI.</p>
+              <h3 className="text-2xl font-bold mb-4 font-outfit">{t('cta_card_title')}</h3>
+              <p className="text-white/70 text-sm mb-8 leading-relaxed">{t('cta_card_desc')}</p>
               <Button asChild className="w-full bg-amavi-green hover:bg-amavi-green/90 text-white font-bold py-6 rounded-2xl shadow-xl shadow-amavi-green/20 transition-all hover:scale-[1.02]">
                 <Link href="/doar" className="flex items-center justify-center gap-2">
-                  Apoiar Missão <ArrowRight className="w-4 h-4" />
+                  {t('cta_card_button')} <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>
@@ -201,11 +201,11 @@ export default async function NewsDetailPage({ params }: Props) {
 
               {/* Newsletter or Share */}
               <div className="bg-amavi-bg-light/50 p-8 rounded-[2rem] border border-amavi-beige/10">
-                 <h3 className="font-bold text-amavi-brown mb-4">Gostou da leitura?</h3>
-                 <p className="text-sm text-amavi-brown/60 mb-6">Partilhe este artigo com a sua rede e ajude-nos a alcançar mais pessoas.</p>
+                 <h3 className="font-bold text-amavi-brown mb-4">{t('share_question')}</h3>
+                 <p className="text-sm text-amavi-brown/60 mb-6">{t('share_description')}</p>
                  <div className="flex gap-3">
                     <Button variant="outline" className="flex-1 rounded-xl bg-white border-amavi-beige/20 text-amavi-brown font-bold text-xs uppercase tracking-widest hover:bg-amavi-green hover:text-white transition-all">
-                      {t('share_title') || 'Partilhar'}
+                      {t('share_title')}
                     </Button>
                  </div>
               </div>

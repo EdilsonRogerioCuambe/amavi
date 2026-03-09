@@ -172,7 +172,15 @@
     "back_to_news": "Voltar para Notícias",
     "share_title": "Compartilhar",
     "social_media_label": "Redes Sociais",
-    "related_news_title": "Outras Notícias"
+    "related_news_title": "Outras Notícias",
+    "tags_label": "Tags",
+    "previous_post": "Anterior",
+    "next_post": "Próxima",
+    "cta_card_title": "Sua contribuição muda vidas.",
+    "cta_card_desc": "Ajude-nos a continuar acolhendo vidas e transformando comunidades através da AMAVI.",
+    "cta_card_button": "Apoiar Missão",
+    "share_question": "Gostou da leitura?",
+    "share_description": "Partilhe este artigo com a sua rede e ajude-nos a alcançar mais pessoas."
   },
   "Header": {
     "donate_button": "Doar Agora",

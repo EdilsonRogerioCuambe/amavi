@@ -186,7 +186,15 @@
     "back_to_news": "Back to News",
     "share_title": "Share",
     "social_media_label": "Social Media",
-    "related_news_title": "Other News"
+    "related_news_title": "Other News",
+    "tags_label": "Tags",
+    "previous_post": "Previous",
+    "next_post": "Next",
+    "cta_card_title": "Your contribution changes lives.",
+    "cta_card_desc": "Help us continue welcoming lives and transforming communities through AMAVI.",
+    "cta_card_button": "Support Mission",
+    "share_question": "Enjoyed the read?",
+    "share_description": "Share this article with your network and help us reach more people."
   },
   "Header": {
     "donate_button": "Donate Now",
