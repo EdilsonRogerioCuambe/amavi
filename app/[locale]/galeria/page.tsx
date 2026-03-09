@@ -58,6 +58,13 @@ export default function GalleryPage() {
       title: "Visão & Compromisso",
       description: "Reforçando o posicionamento da AMAVI como ator-chave na advocacia comunitária feminina em Moçambique.",
       className: "md:col-span-2 md:row-span-2"
+    },
+    {
+      id: "img7",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 17.14.55.jpeg",
+      alt: "Cimeira de Sistemas Alimentares",
+      title: "Planeamento Estratégico",
+      description: "Alinhando a visão da AMAVI com os objetivos globais de desenvolvimento sustentável e segurança alimentar."
     }
   ];
 

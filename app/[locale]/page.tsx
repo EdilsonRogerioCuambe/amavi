@@ -91,6 +91,13 @@ export default function HomePage() {
       title: "Empoderamento e Futuro",
       description: "Representando as vozes de comunidades no desenvolvimento agrícola.",
       className: "md:col-span-2"
+    },
+    {
+      id: "img7",
+      src: "/imagens/WhatsApp Image 2026-03-09 at 17.14.55.jpeg",
+      alt: "Evento de Liderança e Inovação Agrícola",
+      title: "Inovação para Mulheres",
+      description: "Momentos de networking e planeamento estratégico para o futuro das comunidades rurais."
     }
   ];
 
