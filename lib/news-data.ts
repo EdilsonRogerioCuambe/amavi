@@ -1,6 +1,5 @@
 export interface NewsArticle {
   id: string;
-  slug?: string;
   title: string;
   excerpt: string;
   content: string;
@@ -14,8 +13,7 @@ export interface NewsArticle {
 
 export const newsArticles: NewsArticle[] = [
   {
-    id: "agra-womens-conference",
-    slug: "amavi-na-conferencia-da-mulher-agra",
+    id: "amavi-na-conferencia-da-mulher-agra",
     title: 'AMAVI Presente na Conferência da Mulher Organizada pela AGRA',
     excerpt: 'AMAVI marca presença na Conferência da Mulher promovida pela AGRA em Moçambique, reforçando o compromisso com o empoderamento feminino no agronegócio.',
     content: `
@@ -33,8 +31,7 @@ export const newsArticles: NewsArticle[] = [
     tags: ['Mulheres', 'Agronegócio', 'AGRA', 'Empoderamento', 'Eventos']
   },
   {
-    id: "1",
-    slug: "amavi-reconhecimento-juridico-2025",
+    id: "amavi-reconhecimento-juridico-2025",
     title: 'AMAVI Recebe Reconhecimento Jurídico Oficial',
     excerpt: 'A Associação Mãos que Acolhem Vidas foi oficialmente reconhecida pelo Ministério da Justiça, Assuntos Constitucionais e Religiosos de Moçambique.',
     content: `
@@ -51,8 +48,7 @@ export const newsArticles: NewsArticle[] = [
     tags: ['Reconhecimento', 'Institucional', 'Ministério da Justiça', 'AMAVI']
   },
   {
-    id: "2",
-    slug: "programa-empoderamento-mulheres",
+    id: "programa-empoderamento-mulheres",
     title: 'Programa de Empoderamento Económico para Mulheres',
     excerpt: 'AMAVI lança programa focado na capacitação em educação financeira e empreendedorismo para mulheres nas zonas rurais.',
     content: `
@@ -69,8 +65,7 @@ export const newsArticles: NewsArticle[] = [
     tags: ['Mulheres', 'Empoderamento', 'Educação Financeira', 'Empreendedorismo']
   },
   {
-    id: "3",
-    slug: "saude-sexual-reprodutiva-campanha",
+    id: "saude-sexual-reprodutiva-campanha",
     title: 'Campanhas de Saúde Sexual e Reprodutiva nas Comunidades',
     excerpt: 'AMAVI realiza oficinas e campanhas sobre saúde sexual e reprodutiva em comunidades rurais.',
     content: `
@@ -87,8 +82,7 @@ export const newsArticles: NewsArticle[] = [
     tags: ['Saúde', 'Educação', 'Comunidades', 'Prevenção']
   },
   {
-    id: "4",
-    slug: "apoio-criancas-orfas",
+    id: "apoio-criancas-orfas",
     title: 'Programa de Apoio a Crianças Órfãs',
     excerpt: 'AMAVI implementa programa de cuidados e suporte psicossocial para o desenvolvimento integral de crianças órfãs.',
     content: `
@@ -105,15 +99,14 @@ export const newsArticles: NewsArticle[] = [
     tags: ['Crianças', 'Protecção Social', 'Suporte Psicossocial', 'Desenvolvimento']
   },
   {
-    id: "5",
-    slug: "inclusao-pessoas-deficiencia",
+    id: "inclusao-pessoas-deficiencia",
     title: 'Programa de Inclusão para Pessoas com Deficiência',
     excerpt: 'AMAVI promove acesso a programas de inclusão e reabilitação social para pessoas com deficiência nas zonas rurais.',
     content: `
       <p class="mb-6">A AMAVI reconhece a importância da inclusão social e está a promover programas específicos para pessoas com deficiência em comunidades rurais de Moçambique.</p>
       <p class="mb-6">Os programas incluem reabilitação social, formação profissional adaptada e sensibilização comunitária para eliminar barreiras e promover a plena participação na sociedade.</p>
       <h3 class="text-2xl font-bold text-amavi-brown mb-4">Acessibilidade e Dignidade</h3>
-      <p class="mb-6">Este programa está alinhado com o objectivo estatutário de promover o acesso de pessoas com deficiência a programas de inclusão e reabilitação social, garantindo que todos tenham oportunidades iguais.</p>
+      <p class="mb-6">Este programa está alinhado with o objectivo estatutário de promover o acesso de pessoas com deficiência a programas de inclusão e reabilitação social, garantindo que todos tenham oportunidades iguais.</p>
     `,
     category: 'Inclusão',
     date: '2025-09-25',
@@ -123,8 +116,7 @@ export const newsArticles: NewsArticle[] = [
     tags: ['Inclusão', 'Deficiência', 'Reabilitação', 'Direitos']
   },
   {
-    id: "6",
-    slug: "nutricao-comunitaria-sustentavel",
+    id: "nutricao-comunitaria-sustentavel",
     title: 'Acções de Nutrição Comunitária Sustentável',
     excerpt: 'AMAVI desenvolve programas de nutrição comunitária com foco em práticas alimentares sustentáveis.',
     content: `
