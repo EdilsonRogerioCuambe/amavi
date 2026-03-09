@@ -331,6 +331,16 @@ export default function HomePage() {
           <ImageGallery
             images={galleryImages}
           />
+          <div className="text-center mt-12">
+            <Button
+              variant="outline"
+              size="lg"
+              asChild
+              className="border-amavi-green text-amavi-green hover:bg-amavi-green/10 font-bold px-10 py-6 text-lg"
+            >
+              <Link href="/galeria">Ver Mais Galerias</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
