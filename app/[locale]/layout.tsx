@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -136,6 +137,7 @@ export default async function RootLayout({
           {children}
         </main>
         <Footer />
+        <Toaster position="bottom-right" />
       </div>
     </NextIntlClientProvider>
   );

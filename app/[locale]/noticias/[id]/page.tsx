@@ -1,8 +1,9 @@
 import { Link } from '@/app/i18n/navigation';
 import { ReadingProgressBar } from '@/components/reading-progress-bar';
+import { ShareButtons } from '@/components/share-buttons';
 import { Button } from '@/components/ui/button';
 import { newsArticles } from '@/lib/news-data';
-import { ArrowRight, Calendar, ChevronLeft, Facebook, Heart, Linkedin, Share2, Tag, Twitter, User } from 'lucide-react';
+import { ArrowRight, Calendar, ChevronLeft, Heart, Tag, User } from 'lucide-react';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
@@ -98,19 +99,7 @@ export default async function NewsDetailPage({ params }: Props) {
         <div className="flex flex-col lg:flex-row gap-12 xl:gap-20">
           {/* Social Floating Sidebar (Desktop) */}
           <aside className="hidden lg:flex flex-col gap-4 sticky top-32 h-fit">
-            <Button variant="outline" size="icon" className="group rounded-full w-12 h-12 border-amavi-beige/20 bg-white hover:bg-amavi-green hover:text-white transition-all shadow-sm">
-              <Facebook className="w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="icon" className="group rounded-full w-12 h-12 border-amavi-beige/20 bg-white hover:bg-amavi-green hover:text-white transition-all shadow-sm">
-              <Twitter className="w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="icon" className="group rounded-full w-12 h-12 border-amavi-beige/20 bg-white hover:bg-amavi-green hover:text-white transition-all shadow-sm">
-              <Linkedin className="w-5 h-5" />
-            </Button>
-            <div className="w-px h-12 bg-amavi-beige/20 mx-auto my-2" />
-            <Button variant="outline" size="icon" className="group rounded-full w-12 h-12 border-amavi-beige/20 bg-white hover:text-amavi-green transition-all shadow-sm">
-              <Share2 className="w-5 h-5" />
-            </Button>
+            <ShareButtons title={news.title} url={`https://amavi.org.mz/noticias/${news.id}`} variant="floating" />
           </aside>
 
           {/* Main Article Content */}
@@ -203,11 +192,7 @@ export default async function NewsDetailPage({ params }: Props) {
               <div className="bg-amavi-bg-light/50 p-8 rounded-[2rem] border border-amavi-beige/10">
                  <h3 className="font-bold text-amavi-brown mb-4">{t('share_question')}</h3>
                  <p className="text-sm text-amavi-brown/60 mb-6">{t('share_description')}</p>
-                 <div className="flex gap-3">
-                    <Button variant="outline" className="flex-1 rounded-xl bg-white border-amavi-beige/20 text-amavi-brown font-bold text-xs uppercase tracking-widest hover:bg-amavi-green hover:text-white transition-all">
-                      {t('share_title')}
-                    </Button>
-                 </div>
+                 <ShareButtons title={news.title} url={`https://amavi.org.mz/noticias/${news.id}`} variant="inline" />
               </div>
             </div>
           </div>
