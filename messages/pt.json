@@ -207,7 +207,8 @@
     "cta_desc": "Sua doação ajuda a manter este programa ativo e a expandir seu impacto para mais vidas.",
     "cta_button": "Fazer Doação",
     "cta_footer": "Doação 100% segura e transparente",
-    "other_programs_title": "Outros Programas"
+    "other_programs_title": "Outros Programas",
+    "share_title": "Partilhar"
   },
   "ContactPage": {
     "hero_title_prefix": "Entre em",

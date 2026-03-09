@@ -1,6 +1,8 @@
 import { Link } from '@/app/i18n/navigation';
+import { ShareButtons } from '@/components/share-buttons';
 import { Button } from '@/components/ui/button';
 import { BadgeCheck, Calendar, ChevronLeft, Heart, MapPin, Users } from 'lucide-react';
+import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -9,7 +11,45 @@ import { programsInfo } from '@/lib/programs-data';
 
 const programs = programsInfo;
 
-export default async function ProgramDetailPage({ params }: { params: Promise<{ id: string }> }) {
+interface Props {
+  params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const program = programs.find(item => item.id === id);
+  const t = await getTranslations('ProgramDetailPage');
+
+  if (!program) return { title: t('not_found_title') };
+
+  const siteTitle = "AMAVI - Programas de Impacto";
+
+  return {
+    title: `${program.title} | ${siteTitle}`,
+    description: program.description,
+    openGraph: {
+      title: program.title,
+      description: program.description,
+      type: 'website',
+      images: [
+        {
+          url: program.image,
+          width: 1200,
+          height: 630,
+          alt: program.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: program.title,
+      description: program.description,
+      images: [program.image],
+    },
+  };
+}
+
+export default async function ProgramDetailPage({ params }: Props) {
   const { id } = await params;
   const t = await getTranslations('ProgramDetailPage');
 
@@ -124,21 +164,8 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
             </div>
 
             <div className="bg-amavi-bg-light p-8 rounded-3xl border border-amavi-beige/20">
-              <h4 className="font-bold text-amavi-brown mb-4">{t('other_programs_title')}</h4>
-              <ul className="space-y-4">
-                  {programs.filter(p => p.id !== program.id).slice(0, 4).map(p => (
-                   <li key={p.id}>
-                     <Link href={`/programas/${p.id}`} className="flex items-center gap-3 group">
-                       <div className="w-12 h-12 relative rounded-lg overflow-hidden flex-shrink-0">
-                         <Image src={p.image} alt={p.title} fill className="object-cover" />
-                       </div>
-                       <span className="text-sm font-bold text-amavi-brown group-hover:text-amavi-green transition-colors">
-                         {p.title}
-                       </span>
-                     </Link>
-                   </li>
-                 ))}
-              </ul>
+              <h4 className="font-bold text-amavi-brown mb-4">{t('share_title')}</h4>
+              <ShareButtons title={program.title} url={`https://amavi.org.mz/programas/${program.id}`} variant="inline" />
             </div>
           </div>
         </div>

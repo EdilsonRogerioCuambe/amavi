@@ -221,7 +221,8 @@
     "cta_desc": "Your donation helps keep this program active and expand its impact to more lives.",
     "cta_button": "Donate",
     "cta_footer": "100% secure and transparent donation",
-    "other_programs_title": "Other Programs"
+    "other_programs_title": "Other Programs",
+    "share_title": "Share"
   },
   "ContactPage": {
     "hero_title_prefix": "Get in",

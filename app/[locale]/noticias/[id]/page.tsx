@@ -20,8 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!news) return { title: t('not_found_title') };
 
+  const siteTitle = "AMAVI - Associação Mãos que Acolhem Vidas";
+
   return {
-    title: `${news.title}${t('meta_title_suffix')}`,
+    title: `${news.title} | ${siteTitle}`,
     description: news.excerpt,
     openGraph: {
       title: news.title,
@@ -29,7 +31,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       publishedTime: news.date,
       authors: [news.author],
-      images: [{ url: news.image }],
+      images: [
+        {
+          url: news.image,
+          width: 1200,
+          height: 630,
+          alt: news.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
