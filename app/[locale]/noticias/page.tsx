@@ -101,9 +101,9 @@ export default function NewsPage() {
               </div>
             </div>
             <Link href={`/noticias/${filteredArticles[0].id}`}>
-              <Card className="overflow-hidden rounded-[3rem] border-none shadow-[0_30px_60px_-15px_rgba(45,35,27,0.1)] hover:shadow-[0_40px_80px_-15px_rgba(45,35,27,0.15)] transition-all duration-700 group bg-white">
+              <Card className="overflow-hidden rounded-[2rem] border-none shadow-[0_20px_50px_-12px_rgba(45,35,27,0.08)] hover:shadow-[0_30px_60px_-12px_rgba(45,35,27,0.12)] transition-all duration-700 group bg-white">
                 <div className="grid lg:grid-cols-2">
-                  <div className="h-[450px] lg:h-auto relative overflow-hidden">
+                  <div className="h-[300px] md:h-[400px] lg:h-auto relative overflow-hidden">
                     <Image
                       src={filteredArticles[0].image}
                       alt={filteredArticles[0].title}
@@ -112,37 +112,37 @@ export default function NewsPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent lg:hidden" />
                   </div>
-                  <div className="p-10 lg:p-20 flex flex-col justify-center relative">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-amavi-green/5 rounded-bl-[100px] -z-10" />
+                  <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-amavi-green/5 rounded-bl-[80px] -z-10" />
 
-                    <Badge className="w-fit mb-8 bg-amavi-green/10 text-amavi-green hover:bg-amavi-green hover:text-white px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-amavi-green/20 transition-all cursor-pointer">
+                    <Badge className="w-fit mb-6 bg-amavi-green/10 text-amavi-green hover:bg-amavi-green hover:text-white px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-amavi-green/20 transition-all cursor-pointer">
                       {filteredArticles[0].category}
                     </Badge>
 
-                    <h3 className="text-4xl md:text-5xl font-bold text-amavi-brown mb-8 font-outfit leading-[1.1] group-hover:text-amavi-green transition-colors duration-500">
+                    <h3 className="text-3xl md:text-4xl font-bold text-amavi-brown mb-6 font-outfit leading-[1.15] group-hover:text-amavi-green transition-colors duration-500">
                       {filteredArticles[0].title}
                     </h3>
 
-                    <p className="text-lg text-amavi-brown/70 mb-10 leading-relaxed line-clamp-3 font-medium">
+                    <p className="text-base text-amavi-brown/70 mb-8 leading-relaxed line-clamp-3 font-medium">
                       {filteredArticles[0].excerpt}
                     </p>
 
-                    <div className="flex flex-wrap items-center gap-8 text-xs font-bold text-amavi-brown/40 mb-12 uppercase tracking-widest">
-                      <div className="flex items-center gap-3 bg-amavi-bg-light/50 px-4 py-2 rounded-xl">
-                        <Calendar className="w-4 h-4 text-amavi-green" />
+                    <div className="flex flex-wrap items-center gap-6 text-[10px] font-bold text-amavi-brown/40 mb-10 uppercase tracking-widest">
+                      <div className="flex items-center gap-2.5 bg-amavi-bg-light/50 px-3 py-1.5 rounded-lg">
+                        <Calendar className="w-3.5 h-3.5 text-amavi-green" />
                         <span>{formatDate(filteredArticles[0].date)}</span>
                       </div>
-                      <div className="flex items-center gap-3 bg-amavi-bg-light/50 px-4 py-2 rounded-xl">
-                        <Clock className="w-4 h-4 text-amavi-green" />
+                      <div className="flex items-center gap-2.5 bg-amavi-bg-light/50 px-3 py-1.5 rounded-lg">
+                        <Clock className="w-3.5 h-3.5 text-amavi-green" />
                         <span>{filteredArticles[0].readTime} {t('read_time_label')}</span>
                       </div>
                     </div>
 
                     <Button
-                      className="w-fit bg-amavi-brown hover:bg-amavi-green text-white font-black px-10 py-8 rounded-[1.5rem] transition-all duration-500 shadow-xl shadow-amavi-brown/10 hover:shadow-amavi-green/20 group/btn"
+                      className="w-fit bg-amavi-brown hover:bg-amavi-green text-white font-black px-8 py-6 rounded-2xl transition-all duration-500 shadow-lg shadow-amavi-brown/5 hover:shadow-amavi-green/15 group/btn"
                     >
-                      <span className="text-lg">{t('button_read_full')}</span>
-                      <ArrowRight className="w-6 h-6 ml-3 group-hover/btn:translate-x-2 transition-transform duration-500" />
+                      <span className="text-base">{t('button_read_full')}</span>
+                      <ArrowRight className="w-5 h-5 ml-2.5 group-hover/btn:translate-x-1.5 transition-transform duration-500" />
                     </Button>
                   </div>
                 </div>
@@ -169,40 +169,40 @@ export default function NewsPage() {
               {filteredArticles.slice(searchTerm === '' && selectedCategory === 'all' ? 1 : 0).map((article) => (
                 <Link key={article.id} href={`/noticias/${article.id}`}>
                   <Card
-                    className="h-full rounded-[3rem] overflow-hidden border border-amavi-beige/20 hover:shadow-[0_40px_80px_-15px_rgba(45,35,27,0.12)] hover:-translate-y-2 transition-all duration-700 group flex flex-col bg-white"
+                    className="h-full rounded-[2rem] overflow-hidden border border-amavi-beige/20 hover:shadow-[0_20px_40px_-12px_rgba(45,35,27,0.1)] hover:-translate-y-1.5 transition-all duration-700 group flex flex-col bg-white"
                   >
-                    <div className="relative h-72 overflow-hidden">
+                    <div className="relative h-56 md:h-60 overflow-hidden">
                       <Image
                         src={article.image}
                         alt={article.title}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                      <Badge className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-amavi-green px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border-none shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <Badge className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-amavi-green px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border-none shadow-lg">
                         {article.category}
                       </Badge>
                     </div>
-                    <div className="p-10 flex flex-col flex-grow relative">
-                      <div className="flex items-center gap-4 text-[10px] font-black text-amavi-brown/30 uppercase tracking-[0.2em] mb-6">
-                        <span className="flex items-center gap-2 bg-amavi-bg-light px-3 py-1.5 rounded-lg">
-                          <Calendar className="w-3.5 h-3.5 text-amavi-green" />
+                    <div className="p-6 md:p-8 flex flex-col flex-grow relative">
+                      <div className="flex items-center gap-4 text-[9px] font-black text-amavi-brown/30 uppercase tracking-[0.2em] mb-4">
+                        <span className="flex items-center gap-2 bg-amavi-bg-light px-2.5 py-1 rounded-lg">
+                          <Calendar className="w-3 h-3 text-amavi-green" />
                           {formatDate(article.date)}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-amavi-brown mb-5 line-clamp-2 group-hover:text-amavi-green transition-colors duration-500 font-outfit leading-tight">
+                      <h3 className="text-xl font-bold text-amavi-brown mb-4 line-clamp-2 group-hover:text-amavi-green transition-colors duration-500 font-outfit leading-snug">
                         {article.title}
                       </h3>
-                      <p className="text-amavi-brown/60 mb-8 line-clamp-3 leading-relaxed font-medium">
+                      <p className="text-sm text-amavi-brown/60 mb-6 line-clamp-3 leading-relaxed font-medium">
                         {article.excerpt}
                       </p>
-                      <div className="mt-auto pt-6 border-t border-amavi-beige/10">
-                        <div className="flex items-center text-amavi-green font-black text-xs uppercase tracking-[0.2em] group/btn cursor-pointer">
+                      <div className="mt-auto pt-5 border-t border-amavi-beige/10">
+                        <div className="flex items-center text-amavi-green font-black text-[10px] uppercase tracking-[0.15em] group/btn cursor-pointer">
                           <span className="relative">
                             {t('button_read')}
-                            <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-amavi-green transition-all duration-500 group-hover/btn:w-full" />
+                            <span className="absolute bottom-[-2px] left-0 w-0 h-[1.5px] bg-amavi-green transition-all duration-500 group-hover/btn:w-full" />
                           </span>
-                          <ChevronRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-2 transition-transform duration-500" />
+                          <ChevronRight className="w-4 h-4 ml-1.5 group-hover/btn:translate-x-1.5 transition-transform duration-500" />
                         </div>
                       </div>
                     </div>
