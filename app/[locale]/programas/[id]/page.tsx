@@ -71,15 +71,21 @@ export default async function ProgramDetailPage({ params }: Props) {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-amavi-brown via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
-          <div className="max-w-7xl mx-auto">
+
+        <div className="absolute top-0 left-0 w-full pt-28 md:pt-32 z-20">
+          <div className="max-w-7xl mx-auto px-8 md:px-16">
             <Link
               href="/programas"
-              className="inline-flex items-center text-white/80 hover:text-amavi-green transition-colors mb-6 font-bold group"
+              className="inline-flex items-center text-white/80 hover:text-amavi-green transition-colors font-bold group bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10"
             >
               <ChevronLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
               {t('back_to_programs')}
             </Link>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
+          <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-4 text-amavi-green font-bold uppercase tracking-widest text-sm mb-4">
                <BadgeCheck className="w-5 h-5" />
                {t('certified_badge')}

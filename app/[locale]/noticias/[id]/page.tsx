@@ -73,15 +73,20 @@ export default async function NewsDetailPage({ params }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-amavi-bg-light/30 via-transparent to-black/40" />
 
-        <div className="absolute inset-0 flex flex-col justify-end pb-20">
+        <div className="absolute top-0 left-0 w-full pt-28 md:pt-32 z-20">
           <div className="max-w-5xl mx-auto px-6 w-full">
             <Link
               href="/noticias"
-              className="inline-flex items-center text-white/70 hover:text-amavi-green transition-all mb-8 font-bold group bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10"
+              className="inline-flex items-center text-white/70 hover:text-amavi-green transition-all font-bold group bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10"
             >
               <ChevronLeft className="w-5 h-5 mr-1 group-hover:-translate-x-1 transition-transform" />
               {t('back_to_news')}
             </Link>
+          </div>
+        </div>
+
+        <div className="absolute inset-0 flex flex-col justify-end pb-20">
+          <div className="max-w-5xl mx-auto px-6 w-full">
 
             <div className="flex flex-wrap items-center gap-6 text-white/80 mb-8">
               <span className="bg-amavi-green px-4 py-1.5 rounded-full text-white font-black uppercase tracking-[0.15em] text-[10px] shadow-lg shadow-amavi-green/20">
