@@ -94,13 +94,13 @@ export default async function ProgramDetailPage({ params }: { params: Promise<{ 
                </div>
              </div>
 
-             <div className="bg-amavi-green/5 border border-amavi-green/10 rounded-2xl p-6 mb-8">
-               <div className="flex items-center gap-2 text-amavi-green font-bold text-xs uppercase tracking-widest mb-2">
-                 <div className="w-6 h-6 rounded-md bg-amavi-green text-white flex items-center justify-center">
-                   {program.letter}
-                 </div>
-                 Objectivo Estatutário
-               </div>
+              <div className="bg-amavi-green/5 border border-amavi-green/10 rounded-2xl p-6 mb-8">
+                <div className="flex items-center gap-2 text-amavi-green font-bold text-xs uppercase tracking-widest mb-2">
+                  <div className="w-6 h-6 rounded-md bg-amavi-green text-white flex items-center justify-center">
+                    {program.icon ? <program.icon className="w-3.5 h-3.5" /> : <BadgeCheck className="w-3.5 h-3.5" />}
+                  </div>
+                  Objectivo Estatutário
+                </div>
                <p className="text-amavi-brown font-bold italic leading-relaxed">
                  "{program.description}"
                </p>

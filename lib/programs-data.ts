@@ -2,7 +2,6 @@ import { Accessibility, Apple, GraduationCap, HandHeart, Heart, LucideIcon, Shie
 
 export interface Program {
   id: string;
-  letter: string;
   title: string;
   category: string;
   description: string;
@@ -16,8 +15,7 @@ export interface Program {
 
 export const programsInfo: Program[] = [
   {
-    id: "a",
-    letter: "a",
+    id: "melhoria-qualidade-vida-rural",
     title: 'Melhoria da Qualidade de Vida Rural',
     category: 'Desenvolvimento',
     description: 'Promover o melhoramento da qualidade de vida de grupos em situação de vulnerabilidade nas zonas rurais.',
@@ -30,15 +28,14 @@ export const programsInfo: Program[] = [
         <li>Acesso a serviços essenciais e fortalecimento da resiliência local.</li>
       </ul>
     `,
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200',
+    image: '/imagens/rural-community.png',
     beneficiaries: 'Grupos em vulnerabilidade rural',
     locations: 'Marracuene e Nacional',
     status: 'Activo',
     icon: HandHeart
   },
   {
-    id: "b",
-    letter: "b",
+    id: "empoderamento-economico-social",
     title: 'Empoderamento Económico e Social',
     category: 'Empoderamento',
     description: 'Promover o Empoderamento económico e social de mulheres, jovens e pessoas com deficiência.',
@@ -58,8 +55,7 @@ export const programsInfo: Program[] = [
     icon: Users
   },
   {
-    id: "c",
-    letter: "c",
+    id: "educacao-informacao-saude",
     title: 'Educação e Informação em Saúde',
     category: 'Saúde',
     description: 'Promover o acesso à educação e à informação sobre saúde sexual e reprodutiva.',
@@ -72,15 +68,14 @@ export const programsInfo: Program[] = [
         <li>Uso de rádio e mídias sociais para alcance em massa.</li>
       </ul>
     `,
-    image: 'https://images.unsplash.com/photo-1576091160550-217359f42f8c?w=1200',
+    image: '/imagens/health-care.png',
     beneficiaries: 'Jovens e Adultos',
     locations: 'Escolas e Comunidades',
     status: 'Em Lançamento',
     icon: Stethoscope
   },
   {
-    id: "d",
-    letter: "d",
+    id: "desenvolvimento-integral-orfaos",
     title: 'Desenvolvimento Integral de Órfãos',
     category: 'Proteção Social',
     description: 'Promover o desenvolvimento integral de crianças órfãs através de cuidados e suporte psicossocial.',
@@ -93,15 +88,14 @@ export const programsInfo: Program[] = [
         <li>Terapia de grupo e suporte emocional especializado.</li>
       </ul>
     `,
-    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200',
+    image: '/imagens/children-education.png',
     beneficiaries: 'Crianças Órfãs',
     locations: 'Centros e Famílias de Acolhimento',
     status: 'Prioritário',
     icon: Heart
   },
   {
-    id: "e",
-    letter: "e",
+    id: "educacao-financeira-empreendedorismo",
     title: 'Educação Financeira e Empreendedorismo',
     category: 'Educação',
     description: 'Promover a Realização de programas de capacitação em educação financeira e empreendedorismo.',
@@ -121,8 +115,7 @@ export const programsInfo: Program[] = [
     icon: Wallet
   },
   {
-    id: "f",
-    letter: "f",
+    id: "nutricao-comunitaria-sustentavel",
     title: 'Nutrição Comunitária Sustentável',
     category: 'Saúde',
     description: 'Promover o Desenvolvimento de acções de nutrição comunitária com foco em práticas alimentares sustentáveis.',
@@ -142,8 +135,7 @@ export const programsInfo: Program[] = [
     icon: Apple
   },
   {
-    id: "g",
-    letter: "g",
+    id: "oficinas-saude-reprodutiva",
     title: 'Oficinas de Saúde Reprodutiva',
     category: 'Saúde',
     description: 'Promover campanhas e oficinas sobre saúde sexual e reprodutiva.',
@@ -163,8 +155,7 @@ export const programsInfo: Program[] = [
     icon: GraduationCap
   },
   {
-    id: "h",
-    letter: "h",
+    id: "apoio-psicologico-emocional",
     title: 'Apoio Psicológico e Emocional',
     category: 'Proteção Social',
     description: 'Promover o apoio psicológico e emocional para pessoas em situação de luto, violência ou discriminação.',
@@ -184,8 +175,7 @@ export const programsInfo: Program[] = [
     icon: Shield
   },
   {
-    id: "i",
-    letter: "i",
+    id: "inclusao-reabilitacao-social",
     title: 'Inclusão e Reabilitação Social',
     category: 'Inclusão',
     description: 'Promover o acesso de pessoas com deficiência a programas de inclusão e reabilitação social.',
