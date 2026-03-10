@@ -30,9 +30,13 @@ export const metadata: Metadata = {
   authors: [{ name: "AMAVI Team" }],
   creator: "AMAVI",
   publisher: "AMAVI",
-  metadataBase: new URL('https://amavi.org.mz'), // Replace with actual domain in production
+  metadataBase: new URL('https://amavi.org.mz'),
   alternates: {
     canonical: '/',
+    languages: {
+      'pt-MZ': '/pt',
+      'en-US': '/en',
+    },
   },
   manifest: '/site.webmanifest',
   icons: {

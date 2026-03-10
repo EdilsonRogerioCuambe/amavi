@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 
 import { programsInfo } from '@/lib/programs-data';
 
@@ -61,6 +62,36 @@ export default async function ProgramDetailPage({ params }: Props) {
 
   return (
     <article className="min-h-screen bg-white">
+      <Script
+        id="program-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://amavi.org.mz"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Programas",
+                "item": "https://amavi.org.mz/programas"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": program.title,
+                "item": `https://amavi.org.mz/programas/${program.id}`
+              }
+            ]
+          })
+        }}
+      />
       {/* Hero Section */}
       <div className="relative h-[50vh] min-h-[400px] w-full bg-amavi-brown">
         <Image

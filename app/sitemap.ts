@@ -26,8 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}${route}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: route === '' ? 1 : 0.8,
+        changeFrequency: route === '' ? 'daily' : 'weekly',
+        priority: route === '' ? 1 : 0.9,
       });
     });
 
@@ -36,8 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}/noticias/${article.id}`,
         lastModified: new Date(article.date),
-        changeFrequency: 'monthly',
-        priority: 0.6,
+        changeFrequency: 'weekly',
+        priority: 0.8,
       });
     });
 
@@ -46,8 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}/programas/${program.id}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
+        changeFrequency: 'weekly',
+        priority: 0.8,
       });
     });
   });

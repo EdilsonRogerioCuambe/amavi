@@ -8,6 +8,7 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -60,6 +61,57 @@ export default async function NewsDetailPage({ params }: Props) {
 
   return (
     <article className="min-h-screen bg-amavi-bg-light/30 pb-24">
+      <Script
+        id="news-article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://amavi.org.mz"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Notícias",
+                "item": "https://amavi.org.mz/noticias"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": news.title,
+                "item": `https://amavi.org.mz/noticias/${news.id}`
+              }
+            ]
+          })
+        }}
+      />
+      <Script
+        id="news-content-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "headline": news.title,
+            "image": [news.image],
+            "datePublished": news.date,
+            "dateModified": news.date,
+            "author": [
+              {
+                "@type": "Organization",
+                "name": "AMAVI",
+                "url": "https://amavi.org.mz"
+              }
+            ]
+          })
+        }}
+      />
       <ReadingProgressBar />
 
       {/* Hero Header */}
